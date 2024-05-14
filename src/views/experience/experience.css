@@ -1,12 +1,13 @@
-.contact{
+.experience{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f1f1f1;
+    background-color: #f5f5f5;
     padding: 50px 0;
 }
 
-.contact h2{
+.experience h2{
     font-size: 50px;
     font-weight: 700;
     margin-bottom: 20px;

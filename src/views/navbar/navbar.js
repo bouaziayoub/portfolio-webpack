@@ -1,11 +1,18 @@
-import './navbar.css';
+import "./navbar.css";
 
-export function renderNavbar() {
-  const root = document.querySelector('.root');
+const renderNavbar = () => {
+  const root = document.querySelector(".root");
   root.innerHTML += `
     <nav id="navbar">
-      <a href="/">Home</a>
-      <a href="/contact">Contact</a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/studies">Studies</a></li>
+        <li><a href="/experience">Experience</a></li>
+        <li><a href="/projects">Projects</a></li>
+      <li><a href="/contact">Contact</a></li>
+      </ul>
     </nav>
   `;
-}
+};
+
+export default renderNavbar;

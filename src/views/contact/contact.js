@@ -1,11 +1,12 @@
-import './contact.css';
+import "./contact.css";
 
-export function renderContact() {
-  const root = document.querySelector('.root');
+const renderContact = () => {
+  const root = document.querySelector(".root");
   root.innerHTML += `
-    <div id="contact">
-      <h1>Contact Page</h1>
-      <p>Ponte en contacto con nosotros.</p>
+    <div class="contact">
+      <h2>Contact Page</h2>
     </div>
   `;
-}
+};
+
+export default renderContact;

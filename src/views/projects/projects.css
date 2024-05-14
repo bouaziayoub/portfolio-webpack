@@ -1,12 +1,12 @@
-.contact{
+.projects{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f1f1f1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f5f5f5;
     padding: 50px 0;
 }
 
-.contact h2{
+.projects h2{
     font-size: 50px;
     font-weight: 700;
     margin-bottom: 20px;

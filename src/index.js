@@ -1,11 +1,20 @@
 import "./styles.css";
-import { renderHome } from "./views/home/home";
-import { renderNavbar } from "./views/navbar/navbar";
-import { renderContact } from "./views/contact/contact";
+
+import {
+  renderContact,
+  renderHome,
+  renderNavbar,
+  renderStudies,
+  renderExperience,
+  renderProjects,
+} from "./views/export";
 
 const routes = {
-  '/': renderHome,
-  '/contact': renderContact,
+  "/": renderHome,
+  "/contact": renderContact,
+  "/studies": renderStudies,
+  "/projects": renderProjects,
+  "/experience": renderExperience,
 };
 
 function navigateTo(path) {
@@ -16,25 +25,25 @@ function navigateTo(path) {
 function renderRoute() {
   const path = window.location.pathname;
   const route = routes[path];
-  const root = document.querySelector('.root');
+  const root = document.querySelector(".root");
   if (route) {
-    root.innerHTML = ''; // Limpiar el contenido del div root
+    root.innerHTML = ""; // Limpiar el contenido del div root
     renderNavbar();
     route();
   } else {
-    root.innerHTML = ''; // Limpiar el contenido del div root
+    root.innerHTML = ""; // Limpiar el contenido del div root
     renderNavbar();
-    routes['/'](); // Ruta por defecto
+    routes["/"](); // Ruta por defecto
   }
 }
 
 window.onpopstate = renderRoute;
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.body.addEventListener('click', (event) => {
-    if (event.target.matches('a')) {
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.addEventListener("click", (event) => {
+    if (event.target.matches("a")) {
       event.preventDefault();
-      navigateTo(event.target.getAttribute('href'));
+      navigateTo(event.target.getAttribute("href"));
     }
   });
   renderRoute();
