@@ -1,5 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Great+Vibes&family=Ruluko&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  /* --titleFont: "acorn", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+  --bodyFont: "Ruluko", sans-serif;
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-white50: hsla(0, 0%, 100%, 0.5);
+  --color-white20: hsla(0, 0%, 100%, 0.2);
+  --color-white30: hsla(0, 0%, 100%, 0.3);
+  --color-backdrop: hsla(45, 17%, 95%, 0.8);
+  --color-black: hsla(0, 0%, 0%, 1);
+  --color-blue: hsla(204, 97%, 54%, 1);
+  --color-lightblue: hsla(208, 90%, 40%, 1);
+  --color-lightgrey: hsla(0, 0%, 97%, 1);
+  --color-mint: hsla(172, 45%, 75%, 1);
+  --color-lilac: hsla(227, 65%, 87%, 1);
+  --color-rust: hsla(22, 62%, 76%, 1);
+  --color-babyblue: hsla(206, 84%, 86%, 1);
+  --color-pink: hsla(284, 61%, 74%, 1);
+  --color-dark: hsla(0, 0%, 9%, 1);
+  --color-hilite: hsla(172, 95%, 18%, 1);
+  --color-hilite-off: hsla(172, 95%, 18%, 0);
+  --color-white-flash: hsla(0, 0%, 100%, 0.5);
+  --color-beige: hsla(36, 31%, 90%, 1);
+  --color-green300: hsla(159, 42%, 88%, 1);
+  --color-green400: hsla(160, 52%, 71%, 1);
+  --color-green500: hsla(172, 95%, 18%, 1);
+  --color-green600: hsla(171, 15%, 35%, 1);
+  --color-green700: hsla(171, 11%, 24%, 1);
+  --color-green800: hsla(158, 23%, 18%, 1);
+  --color-yellow500: hsla(36, 97%, 70%, 1);
+  --color-yellow600: hsla(36, 74%, 25%, 1);
+  --color-yellow700: hsla(36, 91%, 13%, 1);
+  --spectrum-purple-200: hsla(261, 78.7%, 81.6%, 1);
+  --spectrum-purple-600: hsla(267, 43%, 44.7%, 1);
+  --spectrum-clay-400: #ded5d1;
+  --spectrum-clay-500: #c2b4ac;
+  --proto-bg-primary: #fff;
+  --proto-bg-secondary: #ede8e6;
+  --color-gradient: linear-gradient(
+    to bottom top,
+    hsla(36, 31%, 90%, 0) 0%,
+    hsla(36, 31%, 90%, 0.013) 9.7%,
+    hsla(36, 31%, 90%, 0.049) 18.1%,
+    hsla(36, 31%, 90%, 0.104) 25.5%,
+    hsla(36, 31%, 90%, 0.175) 31.9%,
+    hsla(36, 31%, 90%, 0.259) 37.7%,
+    hsla(36, 31%, 90%, 0.352) 43%,
+    hsla(36, 31%, 90%, 0.45) 47.9%,
+    hsla(36, 31%, 90%, 0.55) 52.8%,
+    hsla(36, 31%, 90%, 0.648) 57.7%,
+    hsla(36, 31%, 90%, 0.741) 63%,
+    hsla(36, 31%, 90%, 0.825) 68.7%,
+    hsla(36, 31%, 90%, 0.896) 75%,
+    hsla(36, 31%, 90%, 0.951) 82.2%,
+    hsla(36, 31%, 90%, 0.987) 90.5%,
+    hsl(36, 31%, 90%) 100%
+  );
+
+  /* Box shadow */
+ --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --shadow-outline: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  --shadow-none: none;
+
+  /* Border radius */
+  --rounded-none: 0;
+  --rounded-sm: 0.125rem;
+  --rounded: 0.25rem;
+  --rounded-md: 0.375rem;
+  --rounded-lg: 0.5rem;
+  --rounded-xl: 0.75rem;
+  --rounded-2xl: 1rem;
+  --rounded-3xl: 1.5rem;
+  --rounded-full: 9999px;
+
+  /* Spacing */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+  --space-48: 12rem;
+  --space-56: 14rem;
+  --space-64: 16rem;
+
+  /* Z-index */
+  --z-0: 0;
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+
+
+  /* Font-weight */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+
+  /*  Line-height */
+  --line-height-3: 0.75rem;
+  --line-height-4: 1rem;
+  --line-height-5: 1.25rem;
+  --line-height-6: 1.5rem;
+  --line-height-7: 1.75rem;
+  --line-height-8: 2rem;
+  --line-height-9: 2.25rem;
+
+/* width */
+  --width-0: 0;
+  --width-1: 0.25rem;
+  --width-2: 0.5rem;
+  --width-3: 0.75rem;
+  --width-4: 1rem;
+  --width-5: 1.25rem;
+  --width-6: 1.5rem;
+  --width-8: 2rem;
+  --width-10: 2.5rem;
+  --width-12: 3rem;
+  --width-16: 4rem;
+  --width-20: 5rem;
+  --width-24: 6rem;
+  --width-32: 8rem;
+  --width-40: 10rem;
+  --width-48: 12rem;
+  --width-56: 14rem;
+  --width-64: 16rem;
+
+  /* height */
+  --height-0: 0;
+  --height-1: 0.25rem;
+  --height-2: 0.5rem;
+  --height-3: 0.75rem;
+  --height-4: 1rem;
+
+
+
+  /* Font-size */
+  --font-size-xxs: 0.rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 4rem;
+
+}
+
+body {
+  /* background: var(--color-gradient); */
+  background: linear-gradient(
+    to right bottom,
+    #fdc168,
+    #dfd582,
+    #cae2a7,
+    #c5eaca,
+    #d4ede4
+  );
+  /* background-image: linear-gradient(
+    to right top,
+    #ede7de,
+    #e9e8dc,
+    #e3eadc,
+    #dcecdf,
+    #d4ede4
+  ); */
+  min-height: 100vh;
+  font-family: var(--bodyFont);
+}
+
+.title-section {
+  font-size: 100px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  font-family: "Great Vibes", cursive;
+  color: var(--color-green500);
+}
+
+/* color para scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-green500);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-green600);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-white);
+}
+
+/* selection */
+
+::selection {
+  background: var(--color-green500);
+  color: var(--color-white);
+}
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 768px) {
+  .title-section {
+    font-size: 50px;
+  }
+}
+
+
+@media screen and (max-width: 590px) {
+  .title-section {
+    font-size: 40px;
+  }
 }

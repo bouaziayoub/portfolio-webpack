@@ -1,8 +1,6 @@
 import "./styles.css";
-
 import {
   renderContact,
-  renderHome,
   renderNavbar,
   renderStudies,
   renderExperience,
@@ -10,17 +8,30 @@ import {
 } from "./views/export";
 
 const routes = {
-  "/": renderHome,
+  "/": renderProjects,
   "/contact": renderContact,
   "/studies": renderStudies,
-  "/projects": renderProjects,
   "/experience": renderExperience,
 };
 
 function navigateTo(path) {
-  window.history.pushState({}, path, window.location.origin + path);
+  let url;
+  if (path.startsWith("http://") || path.startsWith("https://")) {
+    // Si es una URL externa, abrir en una nueva pestaña
+    window.open(path, '_blank');
+    return;
+  } else {
+    if (!path.startsWith("/")) {
+      path = "/" + path;
+    }
+    url = window.location.origin + path;
+  }
+  window.history.pushState({}, path, url);
   renderRoute();
 }
+
+
+
 
 function renderRoute() {
   const path = window.location.pathname;
@@ -30,11 +41,24 @@ function renderRoute() {
     root.innerHTML = ""; // Limpiar el contenido del div root
     renderNavbar();
     route();
+    updateActiveNavLink(path);
   } else {
     root.innerHTML = ""; // Limpiar el contenido del div root
     renderNavbar();
     routes["/"](); // Ruta por defecto
+    updateActiveNavLink("/");
   }
+}
+
+function updateActiveNavLink(path) {
+  const navLinks = document.querySelectorAll("#navbar a");
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === path) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
 }
 
 window.onpopstate = renderRoute;

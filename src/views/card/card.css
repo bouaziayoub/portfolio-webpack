@@ -1,0 +1,117 @@
+/* Card.css */
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 16px;
+  flex: 1 1 45%; /* Permitir que las tarjetas crezcan y se encojan, ocupando aproximadamente 45% del ancho del contenedor */
+  max-width: 35%;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-img-container {
+  position: relative;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-tech {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 48, 20, 0.7);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.tech-url{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.tech-url a{
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.tech-url a:hover{
+    color: #fdc168;
+    text-decoration: underline;
+}
+
+.card:hover .card-tech {
+  opacity: 1;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin: 0 0 8px;
+}
+
+.card-description {
+  color: #555;
+}
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+    max-width: 80%;
+  }
+  .card-title {
+    font-size: 1.2em;
+  }
+  .card-description {
+    font-size: 0.9em;
+  }
+  .tech-url a{
+    font-size: 1.2em;
+  } 
+
+  .card-tech {
+    font-size: 1em;
+  }
+}
+
+
+@media screen and (max-width: 590px) {
+  .card {
+    max-width: 90%;
+  }
+  .card-title {
+    font-size: 1em;
+  }
+
+  .card-description {
+    font-size: 0.8em;
+  }
+}
+
