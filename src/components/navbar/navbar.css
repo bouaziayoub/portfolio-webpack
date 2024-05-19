@@ -11,9 +11,9 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 15px;
   transition: 0.3s;
-  width: 60%;
+  width: 55%;
   padding: 1.5rem;
   border-radius: 40px;
 }
@@ -100,7 +100,7 @@
     padding-right: 14px;
   }
 }
-@media screen and (max-width: 824px) {
+@media screen and (max-width: 840px) {
   #navbar ul {
     width: 86%;
   }
@@ -109,7 +109,7 @@
 
 @media screen and (max-width: 768px) {
   #navbar ul {
-    width: 90%;
+    width: 92%;
   }
 
   #navbar ul li {

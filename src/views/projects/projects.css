@@ -34,7 +34,7 @@
   letter-spacing: 0.1em;
   font-size: 20px;
   width: 90%;
-  margin: 3rem auto;
+  margin: 3rem auto 5rem auto;
 
   animation: slide-bottom 3s ease;
 }
@@ -70,5 +70,20 @@
 
   .proyects-content {
     font-size: 15px;
+  margin: 2rem auto 5rem auto;
+
   }
+}
+
+
+div {
+  color: #d094e5;
+  color: #ffffff80;
+  color: #ffffff;
+  color: #f4f3f0cc;
+  color: #ede7de;
+  color: #bddff9;
+  color: #a3dcd4;
+  color: #e8b89c;
+ 
 }

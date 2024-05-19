@@ -1,5 +1,5 @@
 import "./Projects.css";
-import card from "../card/card";
+import card from "../../components/card/card.js";
 
 const projects = [
   {
@@ -60,11 +60,33 @@ const renderProjects = () => {
         <p>modernas y metodologías ágiles para crear aplicaciones eficientes y escalables</p>
       </div>
       <div class="projects-grid">
-        ${projects.map((project) => card(project)).join("")}
+         ${projects.map((project, index) => card(project, index)).join("")}
       </div>
     </div>
   `;
   root.innerHTML += projectsHtml;
 };
+
+
+// const renderProjects = () => {
+//   const root = document.querySelector(".root");
+//   const projectsHtml = `
+//     <div class="projects">
+//       <h1 class="title-section slide-top">
+//         <span class="firstName">Hola! Soy Ayoub.</span>
+//         <span class="rol">Programador Web.</span>
+//       </h1>
+//       <div class="projects-content">
+//         <p>Como desarrollador fullstack, tengo experiencia en el diseño y la implementación de soluciones web completas,</p>
+//         <p>desde la interfaz de usuario hasta la lógica del servidor y la gestión de bases de datos, utilizando tecnologías</p>
+//         <p>modernas y metodologías ágiles para crear aplicaciones eficientes y escalables</p>
+//       </div>
+//       <div class="projects-grid">
+//         ${projects.map((project, index) => card(project, index)).join("")}
+//       </div>
+//     </div>
+//   `;
+//   root.innerHTML += projectsHtml;
+// };
 
 export default renderProjects;

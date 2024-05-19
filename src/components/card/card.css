@@ -2,27 +2,41 @@
 
 .card {
   border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
   overflow: hidden;
   margin: 16px;
-  flex: 1 1 45%; /* Permitir que las tarjetas crezcan y se encojan, ocupando aproximadamente 45% del ancho del contenedor */
-  max-width: 35%;
   transition: transform 0.3s;
+  opacity: 0.9;
+}
+
+.card-small {
+  flex: 1 1 30%; /* Ancho del 30% */
+  max-width: 30%;
+}
+
+.card-large {
+  flex: 1 1 50%; /* Ancho del 50% */
+  max-width: 50%;
 }
 
 .card:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
+  box-shadow: var(--shadow-2xl);
+  transition: transform 0.3s;
 }
 
 .card-img-container {
   position: relative;
+  float: right;
+  width: 90%;
+  border-radius: 10px 0 0 0;
 }
 
 .card-img {
   width: 100%;
-  height: auto;
+  height: 400px;
   object-fit: cover;
+  border-radius: 10px 0 0 0;
 }
 
 .card-tech {
@@ -40,25 +54,26 @@
   transition: opacity 0.5s ease;
   padding: 10px;
   font-size: 1.2em;
+  border-radius: 10px 0 0 0;
 }
 
-.tech-url{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.tech-url {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.tech-url a{
-    color: var(--color-white);
-    text-decoration: none;
-    font-size: 1.5em;
+.tech-url a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.5em;
 }
 
-.tech-url a:hover{
-    color: #fdc168;
-    text-decoration: underline;
+.tech-url a:hover {
+  color: #fdc168;
+  text-decoration: underline;
 }
 
 .card:hover .card-tech {
@@ -67,6 +82,7 @@
 
 .card-content {
   padding: 16px;
+  color: var(--color-green700);
 }
 
 .card-title {
@@ -74,17 +90,21 @@
   margin: 0 0 8px;
 }
 
-.card-description {
-  color: #555;
-}
-
-
 /* MEDIA QUERY */
 
+@media screen and (max-width: 1024px) {
+  .card-small,
+  .card-large {
+    flex: 1 1 calc(50% - 32px); /* Ajustar para dos columnas con márgenes */
+    max-width: calc(50% - 32px);
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .card {
-    flex: 1 1 100%;
-    max-width: 80%;
+  .card-small,
+  .card-large {
+    flex: 1 1 100%; /* Una columna en pantallas pequeñas */
+    max-width: 100%;
   }
   .card-title {
     font-size: 1.2em;
@@ -92,26 +112,19 @@
   .card-description {
     font-size: 0.9em;
   }
-  .tech-url a{
+  .tech-url a {
     font-size: 1.2em;
-  } 
-
+  }
   .card-tech {
     font-size: 1em;
   }
 }
 
-
 @media screen and (max-width: 590px) {
-  .card {
-    max-width: 90%;
-  }
   .card-title {
     font-size: 1em;
   }
-
   .card-description {
     font-size: 0.8em;
   }
 }
-

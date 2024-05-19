@@ -1,11 +1,12 @@
 import "./styles.css";
 import {
   renderContact,
-  renderNavbar,
   renderStudies,
   renderExperience,
   renderProjects,
-} from "./views/export";
+} from "./views/exportViews";
+
+import { renderNavbar, renderFooter } from "./components/exportComponents";
 
 const routes = {
   "/": renderProjects,
@@ -15,23 +16,18 @@ const routes = {
 };
 
 function navigateTo(path) {
-  let url;
   if (path.startsWith("http://") || path.startsWith("https://")) {
-    // Si es una URL externa, abrir en una nueva pestaña
     window.open(path, '_blank');
     return;
   } else {
     if (!path.startsWith("/")) {
       path = "/" + path;
     }
-    url = window.location.origin + path;
+    const url = window.location.origin + path;
+    window.history.pushState({}, path, url);
+    renderRoute();
   }
-  window.history.pushState({}, path, url);
-  renderRoute();
 }
-
-
-
 
 function renderRoute() {
   const path = window.location.pathname;
@@ -41,11 +37,13 @@ function renderRoute() {
     root.innerHTML = ""; // Limpiar el contenido del div root
     renderNavbar();
     route();
+    renderFooter(); // Renderizar el pie de página
     updateActiveNavLink(path);
   } else {
     root.innerHTML = ""; // Limpiar el contenido del div root
     renderNavbar();
     routes["/"](); // Ruta por defecto
+    renderFooter(); // Renderizar el footer de página
     updateActiveNavLink("/");
   }
 }
@@ -65,7 +63,7 @@ window.onpopstate = renderRoute;
 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", (event) => {
-    if (event.target.matches("a")) {
+    if (event.target.matches("a") && !event.target.target) {
       event.preventDefault();
       navigateTo(event.target.getAttribute("href"));
     }
