@@ -15,7 +15,6 @@ const renderAcerca = () => {
           description:
             "Desarrollador Web. Responsabilidades y logros en cada puesto.",
         },
-        // Agrega más empleos según sea necesario
       ],
     },
     {
@@ -27,7 +26,6 @@ const renderAcerca = () => {
           description:
             "Licenciatura en Ciencias de la Computación. Detalles de estudios universitarios y otros cursos relevantes.",
         },
-        // Agrega más estudios según sea necesario
       ],
     },
     {
@@ -52,7 +50,6 @@ const renderAcerca = () => {
           title: "Certificación XYZ",
           description: "Descripción de la certificación y su relevancia.",
         },
-        // Agrega más certificaciones según sea necesario
       ],
     },
     {
@@ -67,7 +64,6 @@ const renderAcerca = () => {
           title: "Francés",
           description: "Nivel Intermedio",
         },
-        // Agrega más idiomas según sea necesario
       ],
     },
     {
@@ -82,7 +78,6 @@ const renderAcerca = () => {
           title: "Viajes",
           description: "Explorar nuevos lugares y culturas.",
         },
-        // Agrega más intereses y aficiones según sea necesario
       ],
     },
   ];

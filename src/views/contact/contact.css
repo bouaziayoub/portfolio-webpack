@@ -96,3 +96,10 @@
 .show-form-btn:hover{
   background-color: var(--color-green500);
 }
+
+.validate-msg{
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 10px;
+}
