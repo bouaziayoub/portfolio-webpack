@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap');
 
 @import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Great+Vibes&family=Ruluko&display=swap");
 
@@ -194,14 +194,6 @@ body {
     #c5eaca,
     #d4ede4
   );
-  /* background-image: linear-gradient(
-    to right top,
-    #ede7de,
-    #e9e8dc,
-    #e3eadc,
-    #dcecdf,
-    #d4ede4
-  ); */
   min-height: 100vh;
   font-family: var(--bodyFont);
 }
@@ -210,9 +202,54 @@ body {
   font-size: 100px;
   font-weight: 900;
   margin-bottom: 20px;
-  font-family: "Great Vibes", cursive;
+  font-family: "Lobster", sans-serif;
   color: var(--color-green500);
+  margin-top: 3rem;
 }
+
+.sub-title-section {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  font-family: "Lobster", sans-serif;
+  color: var(--color-green500);
+  margin-top: 3rem;
+}
+
+/* Slide bottom */
+.slide-top {
+  animation: slide-top 0.5s ease;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation img oopacity*/
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+
+
 
 /* color para scroll */
 ::-webkit-scrollbar {

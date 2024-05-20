@@ -22,6 +22,10 @@ module.exports = (env, argv) => {
           test: /\.html$/, // Para cargar archivos HTML
           use: ['html-loader'], // Para cargar imágenes en el archivo HTML
         },
+        {
+          test: /\.(png|jpe?g|gif|svg)$/i, // Para manejar archivos de imagen
+          type: 'asset/resource',
+        },
       ],
     },
     plugins: [

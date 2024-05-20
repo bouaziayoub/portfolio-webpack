@@ -15,7 +15,7 @@ const card = ({ title, description, image, technologies, url }, index) => {
   ];
   const backgroundColor = colors[index % colors.length]; // Ciclo de colores
 
-  const cardClass = index % 3 === 0 ? "card-small" : "card-large";
+  const cardClass = index % 3 !== 0 ? "card-small" : "card-large";
   return `
    <div class="card ${cardClass}" style="background-color: ${backgroundColor};">
       <div class="card-content">

@@ -9,7 +9,7 @@ const projects = [
       "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
 
     technologies: ["HTML", "CSS", "JavaScript"],
-    url: "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
+    url: "https://example.com/proyecto1",
   },
   {
     title: "Proyecto 2",
@@ -27,7 +27,7 @@ const projects = [
     technologies: ["Angular", "TypeScript"],
     url: "https://example.com/proyecto3",
   },
-  
+
   {
     title: "Proyecto 4",
     description: "Descripción del proyecto 4.",
@@ -43,6 +43,33 @@ const projects = [
       "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
     technologies: ["HTML", "CSS", "JavaScript"],
     url: "https://example.com/proyecto5",
+  },
+  {
+    title: "Proyecto 6",
+    description: "Descripción del proyecto 6.",
+    image:
+      "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
+    technologies: ["React", "Node.js"],
+    url: "https://example.com/proyecto6",
+  },
+];
+
+const projetsInprogres = [
+  {
+    title: "Proyecto 7",
+    description: "Descripción del proyecto 7.",
+    image:
+      "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
+    technologies: ["Angular", "TypeScript"],
+    url: "https://example.com/proyecto7",
+  },
+  {
+    title: "Proyecto 8",
+    description: "Descripción del proyecto 8.",
+    image:
+      "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
+    technologies: ["Vue", "JavaScript"],
+    url: "https://example.com/proyecto8",
   },
 ];
 
@@ -62,11 +89,20 @@ const renderProjects = () => {
       <div class="projects-grid">
          ${projects.map((project, index) => card(project, index)).join("")}
       </div>
+      <div class="proyects-inprogres">
+        <h2 class="title-section">Proyectos en progreso</h2>
+        <div class="proyects-content">
+          <p>Estos son algunos de los proyectos en los que estoy trabajando actualmente.</p>
+        </div>
+        <div class="projects-grid">
+          ${projetsInprogres
+            .map((project, index) => card(project, index))
+            .join("")}
+        </div>
     </div>
   `;
   root.innerHTML += projectsHtml;
 };
-
 
 // const renderProjects = () => {
 //   const root = document.querySelector(".root");

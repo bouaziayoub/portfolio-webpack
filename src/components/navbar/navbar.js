@@ -5,10 +5,9 @@ const renderNavbar = () => {
   root.innerHTML += `
     <nav id="navbar">
       <ul>
-        <li class="btnn"><a href="/">Proyectos <span class="slash"> / </span></a></li>
+        <li><a href="/">Proyectos <span class="slash"> / </span></a></li>
+        <li><a href="/arceca">Acerca de mí</a></li>
         <li><a href="/studies">Studies</a></li>
-        <li><a href="/experience">Experience</a></li>
-        <li><a href="/projects">Projects</a></li>
       <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>

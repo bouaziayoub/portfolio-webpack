@@ -11,20 +11,7 @@
 }
 
 
-.slide-top {
-  animation: slide-top 0.5s ease;
-}
 
-@keyframes slide-top {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
 /* .proyects-content va pareciendo de manera lenta letra por letra */
 
@@ -73,17 +60,4 @@
   margin: 2rem auto 5rem auto;
 
   }
-}
-
-
-div {
-  color: #d094e5;
-  color: #ffffff80;
-  color: #ffffff;
-  color: #f4f3f0cc;
-  color: #ede7de;
-  color: #bddff9;
-  color: #a3dcd4;
-  color: #e8b89c;
- 
 }

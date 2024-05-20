@@ -2,17 +2,17 @@ import "./styles.css";
 import {
   renderContact,
   renderStudies,
-  renderExperience,
   renderProjects,
+  renderAcerca,
 } from "./views/exportViews";
 
 import { renderNavbar, renderFooter } from "./components/exportComponents";
 
 const routes = {
   "/": renderProjects,
+  "/arceca": renderAcerca,
   "/contact": renderContact,
   "/studies": renderStudies,
-  "/experience": renderExperience,
 };
 
 function navigateTo(path) {
