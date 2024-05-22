@@ -13,7 +13,7 @@
   margin: auto;
   margin-top: 15px;
   transition: 0.3s;
-  width: 55%;
+  width: 45%;
   padding: 1.5rem;
   border-radius: 40px;
 }
@@ -66,12 +66,12 @@
 
 @media screen and (max-width: 1359px) {
   #navbar ul {
-    width: 65%;
+    width: 56%;
   }
 }
 @media screen and (max-width: 1265px) {
   #navbar ul {
-    width: 70%;
+    /* width: 60%; */
   }
   navbar ul li {
     margin: 0 12px;
@@ -90,7 +90,7 @@
 
 @media screen and (max-width: 1024px) {
   #navbar ul {
-    width: 78%;
+    width: 62%;
   }
 
   #navbar ul li a {
@@ -100,13 +100,13 @@
 }
 @media screen and (max-width: 840px) {
   #navbar ul {
-    width: 86%;
+    width: 68%;
   }
 }
 
 @media screen and (max-width: 768px) {
   #navbar ul {
-    width: 92%;
+    width: 75%;
   }
 
   #navbar ul li {
@@ -126,6 +126,9 @@
 }
 
 @media screen and (max-width: 599px) {
+  #navbar ul {
+    width: 87%;
+  }
   #navbar ul li {
     margin: 0 15px;
   }

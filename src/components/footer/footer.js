@@ -27,7 +27,7 @@ const renderFooter = () => {
   const cvLink = document.getElementById('cv-link');
   cvLink.addEventListener('click', (event) => {
     event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-    downloadSectionAsPDF('.acerca', 'acerca-de-mi.pdf'); // Llama a la función para descargar el PDF
+    downloadSectionAsPDF('.acerca', 'Ayoub_Bouazi_Cv.pdf'); // Llama a la función para descargar el PDF
   });
 
   // Agrega el evento de clic al enlace de contacto

@@ -1,18 +1,15 @@
 import "./accordion.css";
 
 const renderAccordion = ({ sections }) => {
-  const renderSection = (section, index) => {
+  const renderSubsection = (subsection) => {
     return `
-      <div class="accordion-item">
-        <div class="accordion-title sub-title-section">
-          <h2>${section.title}</h2>
-        </div>
-        <div class="accordion-header" data-index="${index}">
-          <button>${section.subTitle}</button>
+      <div class="accordion-subsection">
+        <div class="accordion-header">
+          <button>${subsection.subTitle}</button>
           <img src="https://img.icons8.com/ios/452/expand-arrow.png" class="arrow-icon" alt="arrow-icon">
         </div>
         <div class="accordion-content">
-          ${section.content
+          ${subsection.content
             .map(
               (item) => `
             <div class="accordion-content-item">
@@ -27,11 +24,24 @@ const renderAccordion = ({ sections }) => {
     `;
   };
 
+  const renderSection = (section) => {
+    return `
+      <div class="accordion-item">
+        <div class="accordion-title sub-title-section">
+          <h2>${section.title}</h2>
+        </div>
+        <div class="accordion-section-content">
+          ${section.subsections.map(renderSubsection).join("")}
+        </div>
+      </div>
+    `;
+  };
+
   const handleAccordionClick = (event) => {
     const header = event.target.closest('.accordion-header');
     if (header) {
       const content = header.nextElementSibling;
-      content.classList.toggle("active");
+      content.classList.toggle("show-content");
       const icon = header.querySelector("img");
       icon.classList.toggle("rotate");
     }

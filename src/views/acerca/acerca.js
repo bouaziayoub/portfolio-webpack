@@ -1,86 +1,13 @@
 import "./acerca.css";
-import perfilImg from "../../img/acerca/perfil.png"; // Importa la imagen
+import perfilImg from "../../assets/img/acerca/perfil.png"; // Importa la imagen
 import { renderAccordion } from "../../components/exportComponents"; // Importa el componente de acordeón
+
+import sectionsJson from "../../assets/json/sections.json"; // Importa el archivo JSON
 
 const renderAcerca = () => {
   const root = document.querySelector(".root");
 
-  const sections = [
-    {
-      title: "Experiencia Laboral",
-      subTitle: "Empresa XYZ",
-      content: [
-        {
-          title: "Empresa XYZ",
-          description:
-            "Desarrollador Web. Responsabilidades y logros en cada puesto.",
-        },
-      ],
-    },
-    {
-      title: "Educación",
-      subTitle: "Universidad ABC",
-      content: [
-        {
-          title: "Universidad ABC",
-          description:
-            "Licenciatura en Ciencias de la Computación. Detalles de estudios universitarios y otros cursos relevantes.",
-        },
-      ],
-    },
-    {
-      title: "Habilidades",
-      subTitle: "Habilidades Técnicas y Blandas",
-      content: [
-        {
-          title: "Habilidades Técnicas",
-          description: "Programación, diseño gráfico, etc.",
-        },
-        {
-          title: "Habilidades Blandas",
-          description: "Liderazgo, comunicación, etc.",
-        },
-      ],
-    },
-    {
-      title: "Certificaciones",
-      subTitle: "Certificaciones Profesionales",
-      content: [
-        {
-          title: "Certificación XYZ",
-          description: "Descripción de la certificación y su relevancia.",
-        },
-      ],
-    },
-    {
-      title: "Idiomas",
-      subTitle: "Idiomas y Competencia",
-      content: [
-        {
-          title: "Inglés",
-          description: "Nivel Avanzado",
-        },
-        {
-          title: "Francés",
-          description: "Nivel Intermedio",
-        },
-      ],
-    },
-    {
-      title: "Intereses y Aficiones",
-      subTitle: "Intereses Personales",
-      content: [
-        {
-          title: "Deportes",
-          description: "Fútbol, Tenis",
-        },
-        {
-          title: "Viajes",
-          description: "Explorar nuevos lugares y culturas.",
-        },
-      ],
-    },
-  ];
+  const { sections } = sectionsJson;
 
   const acerca = `
     <section class="acerca">
@@ -103,7 +30,6 @@ const renderAcerca = () => {
     </section>
   `;
   root.innerHTML += acerca;
-
 };
 
 export default renderAcerca;

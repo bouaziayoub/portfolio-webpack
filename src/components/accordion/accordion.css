@@ -1,11 +1,14 @@
 .accordion-item {
-  margin-bottom: 10px;
   width: 80%;
   margin: auto;
+  /* margin-bottom: 10px; */
 }
-.accordion-title{
-   margin-bottom: 1.5rem;
-    
+.accordion-item .sub-title-section{
+  margin-top: 3rem;
+  font-size: 20px;
+}
+.accordion-subsection {
+  margin-bottom: 20px;
 }
 .accordion-header {
   display: flex;
@@ -13,8 +16,9 @@
   align-items: center;
   background-color: var(--color-backdrop);
   cursor: pointer;
-  padding: 30px;
+  padding: 15px;
   border-radius: 20px;
+  /* margin-bottom: 15px; */
   text-align: left;
   transition: background-color 0.5s ease;
 }
@@ -33,8 +37,8 @@
 }
 .accordion-header img {
   background-color: transparent;
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   transition: transform 0.5s ease;
 }
 /* Rotate icon */
@@ -44,20 +48,72 @@
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
-  background-color: transparent;
-  color: var(--color-green600) !important;
+  /* transition: max-height 0.5s ease-out; */
+  color: var(--color-green600);
   padding: 0 10px;
   text-align: left;
   /* transition: max-height 0.5s ease; */
 }
 
-.accordion-content.active {
+.accordion-content span {
+  line-height: 1.5rem;
+}
+
+.accordion-content.show-content {
   max-height: 1000px;
-  padding: 10px;
+  /* padding: 10px; */
   transition: max-height 0.5s ease-in;
 }
 
 .accordion-content-item {
   margin: 10px 0;
 }
+
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1359px) {
+  .accordion-item {
+    width: 100%;
+  }
+  /* Font-size*/
+  .accordion-header button {
+    font-size: 1em;
+  }
+  .accordion-content span {
+    font-size: 0.9em;
+  }
+  /* Width img */
+  .accordion-header img {
+    width: 12px;
+    height: 12px;
+  }
+  .accordion-item .sub-title-section {
+    margin-top: 2rem;
+  }
+  .accordion-subsection {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  /* Font-size*/
+  .accordion-header button {
+    font-size: 0.8em;
+  }
+  .accordion-content span {
+    font-size: 0.7em;
+  }
+  /* Width img */
+  .accordion-header img {
+    width: 10px;
+    height: 10px;
+  }
+  .accordion-item .sub-title-section {
+    margin-top: 1rem;
+  }
+  .accordion-subsection {
+    margin-bottom: 10px;
+  }
+}
+

@@ -20,7 +20,10 @@
 .who-iam-desc {
   text-align: left;
   flex: 1;
-  margin-left: 8rem;
+  margin-left: 10rem;
+}
+.who-iam-desc {
+  font-size: 1em;
 }
 
 .description {
@@ -38,8 +41,8 @@
 }
 
 .who-iam img {
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   border-radius: 50% 50% 0 0;
   object-fit: cover;
   margin: auto;
@@ -52,6 +55,7 @@
   color: var(--color-green300);
   margin-top: 8px;
   padding: 15px;
+  width: 300px;
 }
 
 .experience-list,
@@ -84,7 +88,6 @@
   color: #666;
 }
 
-
 /* Descargar pdf */
 .download-btn {
   margin-top: 20px;
@@ -98,4 +101,109 @@
 
 .download-btn:hover {
   background-color: var(--color-green500);
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1024px) {
+  .who-iam {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .who-iam-desc {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .who-iam-desc p {
+    margin: 0;
+    font-size: 1em;
+  }
+  .who-iam img {
+    width: 250px;
+    height: 250px;
+  }
+  .image-caption {
+    margin-top: 5px;
+    width: 250px;
+  }
+  .description {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .who-iam img {
+    width: 200px;
+    height: 200px;
+  }
+  .image-caption {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .who-iam img {
+    width: 150px;
+    height: 150px;
+  }
+  .image-caption {
+    padding: 5px;
+    width: 150px;
+  }
+  .who-iam-desc {
+    margin-top: 1rem;
+  }
+  .who-iam-desc p {
+    font-size: 0.9em;
+  }
+  .description {
+    font-size: 1em;
+  }
+  .experience-list li h3,
+  .education-list li h3,
+  .skills-list li h3 {
+    font-size: 1.1em;
+  }
+  .experience-list li p,
+  .education-list li p,
+  .skills-list li p {
+    font-size: 0.9em;
+  }
+  .download-btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .who-iam img {
+    width: 150px;
+    height: 150px;
+  }
+  .image-caption {
+    width: 150px;
+    font-size: 0.6em;
+  }
+  .who-iam-desc {
+    margin-top: 0.8rem;
+  }
+  .who-iam-desc p {
+    font-size: 0.9em;
+  }
+  .description {
+    font-size: 1em;
+  }
+  .experience-list li h3,
+  .education-list li h3,
+  .skills-list li h3 {
+    font-size: 1.1em;
+  }
+  .experience-list li p,
+  .education-list li p,
+  .skills-list li p {
+    font-size: 0.9em;
+  }
+  .download-btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
 }

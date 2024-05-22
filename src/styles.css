@@ -278,6 +278,15 @@ body {
 
 /* MEDIA QUERY */
 
+@media screen and (max-width: 1024px) {
+  .title-section {
+    font-size: 60px;
+  }
+  .sub-title-section {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .title-section {
     font-size: 50px;
@@ -287,6 +296,9 @@ body {
 
 @media screen and (max-width: 590px) {
   .title-section {
-    font-size: 40px;
+    font-size: 30px;
+  }
+  .sub-title-section {
+    font-size: 16px;
   }
 }
