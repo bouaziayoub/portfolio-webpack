@@ -74,16 +74,16 @@
 .contact-form button[type="submit"]:hover {
   background-color: var(--color-green500);
 }
-.form-message-header{
+.form-message-header {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   font-weight: bold;
   color: var(--color-green600);
   margin-bottom: 15px;
 }
 
-.show-form-btn{
+.show-form-btn {
   background-color: var(--color-green600);
   color: var(--color-white);
   border: none;
@@ -93,13 +93,51 @@
   cursor: pointer;
 }
 
-.show-form-btn:hover{
+.show-form-btn:hover {
   background-color: var(--color-green500);
 }
 
-.validate-msg{
+.validate-msg {
   font-size: 0.8rem;
   font-weight: 600;
   text-align: center;
   margin: 10px;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 840px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .form-message-header {
+    flex-direction: column;
+  }
+  .contact-item {
+    margin-top: 30px;
+  }
+  .show-form-btn{
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact {
+    margin: 6rem auto;
+    width: 95%;
+  }
+  .contact-form {
+    padding: 10px;
+  }
+  .form-group input,
+  .form-group textarea {
+    padding: 5px;
+  }
+  .contact-form button[type="submit"] {
+    padding: 5px 10px;
+  }
+  .show-form-btn {
+    padding: 3px;
+  }
 }
