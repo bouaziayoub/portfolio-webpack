@@ -1,80 +1,34 @@
 import "./Projects.css";
 import card from "../../components/card/card.js";
+import sectionsJson from "../../assets/json/projects.json"; // Importa el archivo JSON con los proyectos
 
-const projects = [
-  {
-    title: "Proyecto 1",
-    description: "Descripción del proyecto 1.",
-    image:
-      "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
+// Importa las imágenes de los proyectos
+import proyect1 from "../../assets/img/projects/proyecto1.png";
+import proyect2 from "../../assets/img/projects/proyecto2.png";
+import proyect3 from "../../assets/img/projects/proyecto3.png";
+import proyect4 from "../../assets/img/projects/proyecto4.png";
+import proyect5 from "../../assets/img/projects/proeycto5.png";
+import proyect6 from "../../assets/img/projects/proeycto6.png";
+import proyectProcess1 from "../../assets/img/projects/proyecto-process1.png";
+import proyectProcess2 from "../../assets/img/projects/proyecto-process2.png";
 
-    technologies: ["HTML", "CSS", "JavaScript"],
-    url: "https://example.com/proyecto1",
-  },
-  {
-    title: "Proyecto 2",
-    description: "Descripción del proyecto 2.",
-    image:
-      "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
-    technologies: ["React", "Node.js"],
-    url: "https://example.com/proyecto2",
-  },
-  {
-    title: "Proyecto 3",
-    description: "Descripción del proyecto 3.",
-    image:
-      "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
-    technologies: ["Angular", "TypeScript"],
-    url: "https://example.com/proyecto3",
-  },
-
-  {
-    title: "Proyecto 4",
-    description: "Descripción del proyecto 4.",
-    image:
-      "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
-    technologies: ["Vue", "JavaScript"],
-    url: "https://example.com/proyecto4",
-  },
-  {
-    title: "Proyecto 5",
-    description: "Descripción del proyecto 5.",
-    image:
-      "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    url: "https://example.com/proyecto5",
-  },
-  {
-    title: "Proyecto 6",
-    description: "Descripción del proyecto 6.",
-    image:
-      "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
-    technologies: ["React", "Node.js"],
-    url: "https://example.com/proyecto6",
-  },
-];
-
-const projetsInprogres = [
-  {
-    title: "Proyecto 7",
-    description: "Descripción del proyecto 7.",
-    image:
-      "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
-    technologies: ["Angular", "TypeScript"],
-    url: "https://example.com/proyecto7",
-  },
-  {
-    title: "Proyecto 8",
-    description: "Descripción del proyecto 8.",
-    image:
-      "https://signoscv.com/wp-content/uploads/2022/04/pagina-web-1-930x620.jpg",
-    technologies: ["Vue", "JavaScript"],
-    url: "https://example.com/proyecto8",
-  },
-];
+const images = {
+  "proyecto1.png": proyect1,
+  "proyecto2.png": proyect2,
+  "proyecto3.png": proyect3,
+  "proyecto4.png": proyect4,
+  "proyecto5.png": proyect5,
+  "proyecto6.png": proyect6,
+  "proyecto-process1.png": proyectProcess1,
+  "proyecto-process2.png": proyectProcess2
+};
 
 const renderProjects = () => {
   const root = document.querySelector(".root");
+
+  // Destructura los datos del JSON
+  const { projects, projectsInProgress } = sectionsJson;
+
   const projectsHtml = `
     <div class="proyects">
       <h1 class="title-section slide-top">
@@ -87,7 +41,7 @@ const renderProjects = () => {
         <p>modernas y metodologías ágiles para crear aplicaciones eficientes y escalables</p>
       </div>
       <div class="projects-grid">
-         ${projects.map((project, index) => card(project, index)).join("")}
+         ${projects.map((project, index) => card({ ...project, image: images[project.image] }, index)).join("")}
       </div>
       <div class="proyects-inprogres">
         <h2 class="title-section">Proyectos en progreso</h2>
@@ -95,14 +49,12 @@ const renderProjects = () => {
           <p>Estos son algunos de los proyectos en los que estoy trabajando actualmente.</p>
         </div>
         <div class="projects-grid">
-          ${projetsInprogres
-            .map((project, index) => card(project, index))
-            .join("")}
+          ${projectsInProgress.map((project, index) => card({ ...project, image: images[project.image] }, index)).join("")}
         </div>
+      </div>
     </div>
   `;
   root.innerHTML += projectsHtml;
 };
-
 
 export default renderProjects;

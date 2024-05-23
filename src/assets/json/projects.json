@@ -1,0 +1,64 @@
+{
+    "projects": [
+      {
+        "title": "Tienda de electrónica",
+        "description": 
+        "Tienda de electrónica con carrito de compras, catálogo de productos y formulario de contacto. Desarrollada con HTML, CSS y JavaScript. Diseño responsive. Proyecto realizado en el curso de Desarrollo Web de Coderhouse.",
+        "image": "proyecto1.png",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "url": "https://example.com/proyecto1"
+      },
+      {
+        "title": "Tienda de deportes",
+        "description": "Tienda de deportes con carrito de compras, catálogo de productos y formulario de contacto. Desarrollada con React ",
+        "image": "proyecto2.png",
+        "technologies": ["React", "Node.js"],
+        "url": "https://example.com/proyecto2"
+      },
+      {
+        "title": "Tienda de zapatos",
+        "description": "Tienda de deportes con carrito de compras, catálogo de productos y formulario de contacto. Desarrollada con React ",
+        "image": "proyecto3.png",
+        "technologies": ["Angular", "TypeScript"],
+        "url": "https://example.com/proyecto3"
+      },
+      {
+        "title": "Beblioteca de libros",
+        "description": "Biblioteca de libros con catálogo de libros y formulario de contacto. Desarrollada con Vue.js. Diseño responsive. Proyecto realizado en el curso de Desarrollo Web de Coderhouse.",
+        "image": "proyecto4.png",
+        "technologies": ["Vue", "JavaScript"],
+        "url": "https://example.com/proyecto4"
+      },
+      {
+        "title": "Gestioanr de proyectos",
+        "description": "Gestor de proyectos con lista de tareas y formulario de contacto. Desarrollado con HTML, CSS y JavaScript. Diseño responsive. Proyecto realizado en el curso de Desarrollo Web de Coderhouse.",
+        "image": "proyecto5.png",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "url": "https://example.com/proyecto5"
+      },
+      {
+        "title": "Gestiona restaurantes",
+        "description": "Gestor de restaurantes con lista de platos y formulario de contacto. Desarrollado con React, Node.js y MongoDB. Diseño responsive. Proyecto realizado en el curso de Desarrollo Web",
+        "image": "proyecto6.png",
+        "technologies": ["React", "Node.js"],
+        "url": "https://example.com/proyecto6"
+      }
+    ],
+    "projectsInProgress": [
+      {
+        "title": "Restautante",
+        "description": "Es un proyecto en progreso de un restaurante con carrito de compras, catálogo de productos y formulario de contacto. Desarrollado con Angular y TypeScript. Diseño responsive. Proyecto realizado en el curso de Desarrollo Web de Coderhouse.",
+        "image": "proyecto-process1.png",
+        "technologies": ["Angular", "TypeScript"],
+        "url": "https://example.com/proyecto7"
+      },
+      {
+        "title": "Platafroma para ver peliculas",
+        "description": " Es un proyecto en progreso de una plataforma para ver películas con catálogo de películas y formulario de contacto. Desarrollado con Vue.js. Diseño responsive.",
+        "image": "proyecto-process2.png",
+        "technologies": ["Vue", "JavaScript"],
+        "url": "https://example.com/proyecto8"
+      }
+    ]
+  }
+  
