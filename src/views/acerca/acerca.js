@@ -7,7 +7,35 @@ import sectionsJson from "../../assets/json/sections.json"; // Importa el archiv
 const renderAcerca = () => {
   const root = document.querySelector(".root");
 
-  const { sections } = sectionsJson;
+  const { sections, skills, languages, interests } = sectionsJson;
+
+  const levelToStars = (level) => {
+    switch (level) {
+      case "Nativo":
+        return "★★★★★";
+      case "Nivel Avanzado":
+        return "★★★★☆";
+      case "Nivel Intermedio":
+        return "★★★☆☆";
+      case "Nivel Básico":
+        return "★★☆☆☆";
+      default:
+        return "☆☆☆☆☆";
+    }
+  };
+
+  const renderList = (items, type) => {
+    return items
+      .map(
+        (item) => `
+        <div class="list-item">
+          <h3>${item.title}</h3>
+          ${type ? `<p>${levelToStars(item.description.match(/<span>(.*?)<\/span>/)[1])}</p>` : `<p>${item.description}</p>`}
+        </div>
+      `
+      )
+      .join("");
+  };
 
   const acerca = `
     <section class="acerca">
@@ -26,6 +54,38 @@ const renderAcerca = () => {
       </div>
   
       ${renderAccordion({ sections })}
+
+      <section class="additional-sections">
+        <div class="section skills">
+          <h2 class="sub-title-section">Habilidades</h2>
+          <div class="skills-container">
+            <div class="sub-section skills-tecnicas">
+              <h3 class="sub-sub-title-section">Habilidades Técnicas</h3>
+              <div class="skills-list">
+                ${renderList(skills.tecnicas, "skills")}
+              </div>
+            </div>
+            <div class="sub-section skills-blandas">
+              <h3 class="sub-sub-title-section">Habilidades Blandas</h3>
+              <div class="skills-list">
+                ${renderList(skills.blandas, "skills")}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section languages">
+          <h2 class="sub-title-section">Idiomas</h2>
+            <div class="languages-list">
+              ${renderList(languages, "languages")}
+            </div>
+        </div>
+        <div class="section interests">
+          <h2 class="sub-title-section">Intereses y Aficiones</h2>
+            <div class="interests-list">
+            ${renderList(interests)}
+            </div>
+        </div>
+      </section>
       
     </section>
   `;

@@ -1,12 +1,12 @@
 import "./accordion.css";
-
+import arrow from "../../assets/img/logo/expand-arrow.png";
 const renderAccordion = ({ sections }) => {
   const renderSubsection = (subsection) => {
     return `
       <div class="accordion-subsection">
         <div class="accordion-header">
           <button>${subsection.subTitle}</button>
-          <img src="https://img.icons8.com/ios/452/expand-arrow.png" class="arrow-icon" alt="arrow-icon">
+          <img src= ${arrow} class="arrow-icon" alt="arrow-icon">
         </div>
         <div class="accordion-content">
           ${subsection.content

@@ -8,7 +8,7 @@
           "content": [
             {
               "title": "Empresa XYZ - Desarrollador Web Full Stack Jr - 2020 - Actualidad, Barcelona, España",
-              "description": "<span>Desarrollador Web. Responsabilidades y logros en cada puesto. <br> Implementé varias funcionalidades nuevas en la plataforma web, optimicé el rendimiento del sitio y colaboré con el equipo de diseño para mejorar la experiencia del usuario.</span>"
+              "description": "<p>Desarrollador Web. Responsabilidades y logros en cada puesto. <br> Implementé varias funcionalidades nuevas en la plataforma web, optimicé el rendimiento del sitio y colaboré con el equipo de diseño para mejorar la experiencia del usuario.</p>"
             }
           ]
         },
@@ -17,7 +17,7 @@
           "content": [
             {
               "title": "Empresa ABC - Desarrollador Web Frontend - 2018 - 2020, Madrid, España",
-              "description": "<span>Desarrollador Web. Responsabilidades y logros en cada puesto. <br> Desarrollé componentes de interfaz de usuario reutilizables, mejoré la accesibilidad del sitio web y trabajé estrechamente con el equipo de backend para integrar servicios RESTful.</span>"
+              "description": "<p>Desarrollador Web. Responsabilidades y logros en cada puesto. <br> Desarrollé componentes de interfaz de usuario reutilizables, mejoré la accesibilidad del sitio web y trabajé estrechamente con el equipo de backend para integrar servicios RESTful.</p>"
             }
           ]
         }
@@ -27,29 +27,19 @@
       "title": "Educación",
       "subsections": [
         {
-          "subTitle": "Universidad ABC",
+          "subTitle": "Universidad Ista Desarrollo Web - 2017 - 2018, Ouarzazate, Marruecos",
           "content": [
             {
               "title": "Universidad ABC",
-              "description": "<span>Licenciatura en Ciencias de la Computación. Detalles de estudios universitarios y otros cursos relevantes. <br> Cursé materias como Algoritmos, Estructuras de Datos, Desarrollo Web y Bases de Datos. Realicé varios proyectos académicos que incluían el desarrollo de aplicaciones web y móviles.</span>"
+              "description": "<p>Licenciatura en Ciencias de la Computación. Detalles de estudios universitarios y otros cursos relevantes. <br> Cursé materias como Algoritmos, Estructuras de Datos, Desarrollo Web y Bases de Datos. Realicé varios proyectos académicos que incluían el desarrollo de aplicaciones web y móviles.</p>"
             }
           ]
-        }
-      ]
-    },
-    {
-      "title": "Habilidades",
-      "subsections": [
-        {
-          "subTitle": "Habilidades Técnicas y Blandas",
+        },{
+          "subTitle": "Universidad XYZ Diseño Gráfico - 2016 - 2017, Marrakech, Marruecos",
           "content": [
             {
-              "title": "Habilidades Técnicas",
-              "description": "<span>Programación, diseño gráfico, etc. <br> Lenguajes: JavaScript, Python, Java. <br> Tecnologías: React, Angular, Node.js, MongoDB. <br> Herramientas: Git, Docker, Jenkins.</span>"
-            },
-            {
-              "title": "Habilidades Blandas",
-              "description": "<span>Liderazgo, comunicación, etc. <br> Capacidad para trabajar en equipo, resolución de problemas, gestión del tiempo y habilidades de presentación.</span>"
+              "title": "Universidad XYZ",
+              "description": "<p>Grado en Diseño Gráfico. Detalles de estudios universitarios y otros cursos relevantes. <br> Aprendí técnicas de diseño gráfico, herramientas de edición de imágenes y principios de diseño. Realicé proyectos creativos que incluían la creación de logotipos, carteles y folletos.</p>"
             }
           ]
         }
@@ -59,63 +49,110 @@
       "title": "Certificaciones",
       "subsections": [
         {
-          "subTitle": "Certificaciones Profesionales",
+          "subTitle": "Certificación Microsoft Certified: Azure Developer Associate",
           "content": [
             {
-              "title": "Certificación XYZ",
-              "description": "<span>Descripción de la certificación y su relevancia. <br> Obtenida en 2021, esta certificación valida mis conocimientos en desarrollo web y mi capacidad para construir aplicaciones eficientes y escalables.</span>"
+              "title": "Certificación Microsoft Certified: Azure Developer Associate",
+              "description": "<p>Descripción de la certificación y su relevancia. <br> Obtenida en 2020, esta certificación valida mis conocimientos en desarrollo web y mi capacidad para construir aplicaciones eficientes y escalables.</p>"
+            }        
+          ]
+        },
+        {
+          "subTitle": "Certificación Google Analytics Individual Qualification",
+          "content": [
+            {
+              "title": "Certificación Google Analytics Individual Qualification",
+              "description": "<p>Descripción de la certificación y su relevancia. <br> Obtenida en 2019, esta certificación demuestra mi experiencia en análisis de datos y mi capacidad para interpretar métricas de rendimiento web.</p>"
+            }
+          ]
+        },{
+          "subTitle": "Certificación Adobe Certified Expert: Photoshop CC",
+          "content": [
+            {
+              "title": "Certificación Adobe Certified Expert: Photoshop CC",
+              "description": "<p>Descripción de la certificación y su relevancia. <br> Obtenida en 2018, esta certificación confirma mi habilidad para utilizar herramientas de edición de imágenes y crear diseños gráficos de alta calidad.</p>"
             }
           ]
         }
       ]
+    }
+  ],
+  "skills": {
+    "tecnicas": [
+      {
+        "title": "Programación",
+        "description": "<span>Nivel Avanzado</span>"
+      },
+      {
+        "title": "Diseño Gráfico",
+        "description": "<span>Nivel Intermedio</span>"
+      },
+      {
+        "title": "Frontend [HTML, CSS, JavaScript]",
+        "description": "<span>Nivel Avanzado</span>"
+      },
+      {
+        "title": "Backend [Node.js, Express, MongoDB]",
+        "description": "<span>Nivel Intermedio</span>"
+      },
+      {
+        "title": "Bases de Datos [SQL, NoSQL]",
+        "description": "<span>Nivel Avanzado</span>"
+      }
+    ],
+    "blandas": [
+      {
+        "title": "Liderazgo",
+        "description": "<span>Nivel Avanzado</span>"
+      },
+      {
+        "title": "Comunicación",
+        "description": "<span>Nivel Intermedio</span>"
+      },
+      {
+        "title": "Trabajo en Equipo",
+        "description": "<span>Nivel Avanzado</span>"
+      },
+      {
+        "title": "Resolución de Problemas",
+        "description": "<span>Nivel Intermedio</span>"
+      },
+      {
+        "title": "Creatividad",
+        "description": "<span>Nivel Avanzado</span>"
+      }
+    ]
+  },
+  "languages": [
+    {
+      "title": "Árabe",
+      "description": "<span>Nativo</span>"
     },
     {
-      "title": "Idiomas",
-      "subsections": [
-        {
-          "subTitle": "Idiomas y Competencia",
-          "content": [
-            {
-              "title": "Arabe",
-              "description": "<span>Lengua Materna <br> Capacidad para comunicarme eficazmente en entornos profesionales y personales.</span>"
-             },
-             {
-              "title": "Español",
-              "description": "<span>Nivel Avanzado <br> Habilidad para comunicarme eficazmente en un entorno profesional, tanto verbalmente como por escrito.</span>"
-             },
-              {
-              "title": "Inglés",
-              "description": "<span>Nivel Avanzado <br> Habilidad para comunicarme eficazmente en un entorno profesional, tanto verbalmente como por escrito.</span>"
-            },
-            {
-              "title": "Francés",
-              "description": "<span>Nivel Avanzado <br> Habilidad para comunicarme eficazmente en un entorno profesional, tanto verbalmente como por escrito.</span>"
-            },
-            {
-              "title": "Catalán",
-              "description": "<span>Nivel Básico <br> Conocimientos básicos de vocabulario y gramática, con capacidad para seguir instrucciones sencillas.</span>"
-            }
-          ]
-        }
-      ]
+      "title": "Español",
+      "description": "<span>Nivel Intermedio</span>"
     },
     {
-      "title": "Intereses y Aficiones",
-      "subsections": [
-        {
-          "subTitle": "Intereses Personales",
-          "content": [
-            {
-              "title": "Deportes",
-              "description": "<span>Fútbol, Tenis <br> Participé en equipos locales de fútbol y torneos de tenis.</span>"
-            },
-            {
-              "title": "Viajes",
-              "description": "<span>Explorar nuevos lugares y culturas. <br> He viajado a más de 10 países, aprendiendo sobre sus culturas y tradiciones.</span>"
-            }
-          ]
-        }
-      ]
+      "title": "Inglés",
+      "description": "<span>Nivel Avanzado</span>"
+    },
+    {
+      "title": "Francés",
+      "description": "<span>Nivel Intermedio</span>"
+    },
+    {
+      "title": "Catalán",
+      "description": "<span>Nivel Básico</span>"
+    }
+  ],
+  "interests": [
+    {
+      "title": "Deportes",
+      "description": "<p>Fútbol, Tenis <br> Participé en equipos locales de fútbol y torneos de tenis.</p>"
+    },
+    {
+      "title": "Viajes",
+      "description": "<p>Explorar nuevos lugares y culturas. <br> He viajado a más de 10 países, aprendiendo sobre sus culturas y tradiciones.</p>"
     }
   ]
 }

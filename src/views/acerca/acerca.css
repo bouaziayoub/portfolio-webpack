@@ -58,50 +58,40 @@
   width: 300px;
 }
 
-.experience-list,
-.education-list,
-.skills-list {
+.skills-list,
+.languages-list,
+.interests-list {
+  display: flex;
+  justify-content: space-around;
   text-align: left;
-  margin: 20px 0;
-  padding: 0;
-  list-style: none;
+  /* width: 70%; */
+  margin: auto;
+  color: var(--color-green700)
 }
 
-.experience-list li,
-.education-list li,
-.skills-list li {
-  margin: 10px 0;
+.additional-sections h2 {
+  /* margin: 0; */
+  margin-top: 2rem;
 }
 
-.experience-list li h3,
-.education-list li h3,
-.skills-list li h3 {
-  margin: 0 0 5px 0;
-  font-size: 1.2em;
+.skills-container{
+  display: flex;
+  justify-content: space-around;
 }
 
-.experience-list li p,
-.education-list li p,
-.skills-list li p {
-  margin: 0 0 10px 0;
-  font-size: 1em;
-  color: #666;
+.skills-container .sub-sub-title-section{
+  margin: 0;
+  margin-bottom: 1rem;
+  color: var(--color-green500);
+  text-align: left;
+  font-size: 1.4em;
 }
 
-/* Descargar pdf */
-.download-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: var(--color-green600);
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+.skills-tecnicas .skills-list, .skills-blandas .skills-list {
+  flex-direction: column;
+  text-align: left;
 }
 
-.download-btn:hover {
-  background-color: var(--color-green500);
-}
 
 /* MEDIA QUERY */
 
@@ -159,20 +149,6 @@
   .description {
     font-size: 1em;
   }
-  .experience-list li h3,
-  .education-list li h3,
-  .skills-list li h3 {
-    font-size: 1.1em;
-  }
-  .experience-list li p,
-  .education-list li p,
-  .skills-list li p {
-    font-size: 0.9em;
-  }
-  .download-btn {
-    padding: 8px 15px;
-    font-size: 0.9em;
-  }
 }
 @media screen and (max-width: 480px) {
   .who-iam img {
@@ -192,18 +168,5 @@
   .description {
     font-size: 1em;
   }
-  .experience-list li h3,
-  .education-list li h3,
-  .skills-list li h3 {
-    font-size: 1.1em;
-  }
-  .experience-list li p,
-  .education-list li p,
-  .skills-list li p {
-    font-size: 0.9em;
-  }
-  .download-btn {
-    padding: 8px 15px;
-    font-size: 0.9em;
-  }
 }
+

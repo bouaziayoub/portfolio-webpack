@@ -3,7 +3,7 @@
   margin: auto;
   /* margin-bottom: 10px; */
 }
-.accordion-item .sub-title-section{
+.accordion-item .sub-title-section {
   margin-top: 3rem;
   font-size: 20px;
 }
@@ -69,7 +69,6 @@
   margin: 10px 0;
 }
 
-
 /* MEDIA QUERY */
 @media screen and (max-width: 1359px) {
   .accordion-item {
@@ -96,12 +95,12 @@
 }
 
 @media screen and (max-width: 768px) {
-
   /* Font-size*/
   .accordion-header button {
     font-size: 0.8em;
   }
   .accordion-content span {
+    line-height: 1rem;
     font-size: 0.7em;
   }
   /* Width img */
@@ -116,4 +115,3 @@
     margin-bottom: 10px;
   }
 }
-
