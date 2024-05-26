@@ -1,0 +1,61 @@
+.notes {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .notes .title-section {
+    margin-top: 5rem;
+  }
+
+  
+  .notes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-btn {
+    background-color: var(--color-green600);
+    color: var(--color-white);
+    
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination-btn:hover {
+    background-color: var(--color-green700);
+  }
+  
+  .pagination-btn:disabled {
+    background-color: var(--color-gray400);
+    cursor: not-allowed;
+  }
+  
+  .pagination-btn.active {
+    background-color: var(--color-green800);
+    font-weight: bold;
+  }
+  
+  /* MEDIA QUERIES */
+  
+  @media screen and (max-width: 768px) {
+    .notes .title-section {
+      font-size: 1.5em;
+    }
+  
+    .notes-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

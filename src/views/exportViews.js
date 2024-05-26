@@ -1,6 +1,6 @@
 export { default as  renderProjects } from "./projects/projects.js";
 
-export { default as  renderStudies } from "./studies/studies.js";
+export { default as renderNotes } from "./notes/notes.js";
 
 
 export { default as  renderContact } from "./contact/contact.js";

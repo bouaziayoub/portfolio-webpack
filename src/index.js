@@ -1,7 +1,7 @@
 import "./styles.css";
 import {
   renderContact,
-  renderStudies,
+  renderNotes,
   renderProjects,
   renderAcerca,
 } from "./views/exportViews";
@@ -12,7 +12,7 @@ const routes = {
   "/": renderProjects,
   "/arceca": renderAcerca,
   "/contact": renderContact,
-  "/studies": renderStudies,
+  "/notes": renderNotes,
 };
 
 function navigateTo(path) {

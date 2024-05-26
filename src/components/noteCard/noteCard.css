@@ -1,0 +1,74 @@
+.note-card {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  /* margin: 16px; */
+  padding: 16px;
+  transition: transform 0.3s;
+  width: 80%;
+}
+
+/* .note-card:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+} */
+
+.note-card-content {
+  color: var(--color-green700);
+}
+
+.note-card-title {
+  font-size: 1.5em;
+  margin: 0 0 8px;
+  color: var(--color-green700);
+}
+
+.note-card-date {
+  font-size: 0.9em;
+  color: var(--color-gray600);
+  margin-bottom: 12px;
+}
+
+.note-card-description {
+  font-size: 1em;
+  color: var(--color-green500);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  .note-card {
+    width: 90%;
+  }
+
+  .note-card-title {
+    font-size: 1.2em;
+  }
+
+  .note-card-description {
+    font-size: 0.9em;
+  }
+
+  .note-card-date {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .note-card {
+    width: 100%;
+  }
+
+  .note-card-title {
+    font-size: 1em;
+  }
+
+  .note-card-description {
+    font-size: 0.8em;
+  }
+
+  .note-card-date {
+    font-size: 0.7em;
+  }
+}
