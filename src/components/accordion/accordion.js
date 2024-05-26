@@ -27,8 +27,8 @@ const renderAccordion = ({ sections }) => {
   const renderSection = (section) => {
     return `
       <div class="accordion-item">
-        <div class="accordion-title sub-title-section">
-          <h2>${section.title}</h2>
+        <div class="accordion-title">
+          <h2 class="sub-title-section">${section.title}</h2>
         </div>
         <div class="accordion-section-content">
           ${section.subsections.map(renderSubsection).join("")}

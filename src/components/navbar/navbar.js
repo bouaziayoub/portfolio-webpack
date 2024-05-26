@@ -11,7 +11,12 @@ import dark from "../../assets/img/dark-light-mode/dark.png";
 
 const renderNavbar = () => {
   const root = document.querySelector(".root");
+  // Guardadr en un variable src de la imagen
+  const srcMode = document.body.classList.contains("dark-mode") ? light : dark;
+  // Agregar el navbar al root
+
   root.innerHTML += `
+  <header>
     <nav id="navbar">
       <ul>
         <li><a href="/">Proyectos <span class="slash"> / </span></a></li>
@@ -19,10 +24,11 @@ const renderNavbar = () => {
         <li><a href="/notes">Notes</a></li>
         <li><a href="/contact">Contact</a></li>
         <li><button id="dark-mode-toggle">
-          <img src="${dark}" alt="dark-light-mode" />
+          <img src="${srcMode}" alt="dark-light-mode" />
         </button></li>
       </ul>
     </nav>
+  </header>
   `;
 
   // Función para manejar el clic en el botón

@@ -2,7 +2,6 @@
 
 const toggleDarkMode = () => {
   document.body.classList.toggle('dark-mode');
-
 };
 
 // Guardar preferencia del modo en localStorage

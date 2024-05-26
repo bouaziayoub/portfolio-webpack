@@ -46,4 +46,17 @@
 }
 
 
+/* MEDIA QUERY */
 
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .footer-copy {
+    margin-bottom: 20px;
+  }
+  .footer-contact {
+    margin-top: 20px;
+  }
+}

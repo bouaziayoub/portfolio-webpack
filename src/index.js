@@ -8,7 +8,7 @@ import $ from "jquery";
 document.addEventListener("DOMContentLoaded", () => {
   loadDarkModePreference();
 
-  // Añadir evento para cambiar el modo oscuro
+  // Añadir evento para cambiar el modo oscuro (PARA LA SECCION NOTES)
   function toggleDark(event) {
     const darkMode = document.body.classList.contains("dark-mode");
     document.body.classList.toggle("dark-mode", !darkMode);
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     saveDarkModePreference(!darkMode);
     loadDarkModePreference();
   }
-
+  // Añadir evento para cambiar el modo oscuro
   $(document).ready(function () {
     $("#dark-mode-toggle").on("click", function (event) {
       toggleDark(event);
@@ -70,6 +70,11 @@ function renderRoute() {
     routes["/"](); // Ruta por defecto
     renderFooter(); // Renderizar el footer de página
     updateActiveNavLink("/");
+  }
+
+  if (path === "/notes") {
+    // remove footer
+    document.querySelector(".footer").remove();
   }
 }
 

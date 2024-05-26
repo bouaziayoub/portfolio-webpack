@@ -20,7 +20,7 @@ const images = {
   "proyecto5.png": proyect5,
   "proyecto6.png": proyect6,
   "proyecto-process1.png": proyectProcess1,
-  "proyecto-process2.png": proyectProcess2
+  "proyecto-process2.png": proyectProcess2,
 };
 
 const renderProjects = () => {
@@ -30,6 +30,7 @@ const renderProjects = () => {
   const { projects, projectsInProgress } = sectionsJson;
 
   const projectsHtml = `
+  <section>
     <div class="proyects">
       <h1 class="title-section slide-top">
         <span class="firstName">Hola! Soy Ayoub.</span>
@@ -41,7 +42,11 @@ const renderProjects = () => {
         <p>modernas y metodologías ágiles para crear aplicaciones eficientes y escalables</p>
       </div>
       <div class="projects-grid">
-         ${projects.map((project, index) => card({ ...project, image: images[project.image] }, index)).join("")}
+         ${projects
+           .map((project, index) =>
+             card({ ...project, image: images[project.image] }, index)
+           )
+           .join("")}
       </div>
       <div class="proyects-inprogres">
         <h2 class="title-section">Proyectos en progreso</h2>
@@ -49,10 +54,15 @@ const renderProjects = () => {
           <p>Estos son algunos de los proyectos en los que estoy trabajando actualmente.</p>
         </div>
         <div class="projects-grid">
-          ${projectsInProgress.map((project, index) => card({ ...project, image: images[project.image] }, index)).join("")}
+          ${projectsInProgress
+            .map((project, index) =>
+              card({ ...project, image: images[project.image] }, index)
+            )
+            .join("")}
         </div>
       </div>
     </div>
+  </section>
   `;
   root.innerHTML += projectsHtml;
 };

@@ -5,7 +5,8 @@
 }
 .accordion-item .sub-title-section {
   margin-top: 3rem;
-  font-size: 20px;
+  /* font-size: 20px; */
+  text-align: center;
 }
 .accordion-subsection {
   margin-bottom: 20px;

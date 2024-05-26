@@ -1,3 +1,4 @@
+// footer.js
 import "./footer.css";
 import { downloadSectionAsPDF } from "../../utils/downloadPdf"; // Importa la función para descargar PDF
 
@@ -10,8 +11,8 @@ const renderFooter = () => {
       </div>
       <div class="footer-contact">
         <ul class="social-links">
-          <li><a href="https://www.linkedin.com/in/ayoub-bouazi" target="_blank">LinkedIn</a></li>
-          <li><a href="https://github.com/ayoubbouazi" target="_blank">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/ayoub-bouazi" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://github.com/ayoubbouazi" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           <li><a id="cv-link" href="#">CV</a></li> <!-- Cambia el href a "#" -->
         </ul>
         <ul class="social-links">

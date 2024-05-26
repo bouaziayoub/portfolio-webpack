@@ -2,7 +2,7 @@ import "./acerca.css";
 import perfilImg from "../../assets/img/acerca/perfil.png"; // Importa la imagen
 import { renderAccordion } from "../../components/exportComponents"; // Importa el componente de acordeón
 
-import sectionsJson from "../../assets/json/sections.json"; // Importa el archivo JSON
+import sectionsJson from "../../assets/json/acerca.json"; // Importa el archivo JSON
 
 const renderAcerca = () => {
   const root = document.querySelector(".root");
@@ -30,13 +30,7 @@ const renderAcerca = () => {
         (item) => `
         <div class="list-item">
           <h3>${item.title}</h3>
-          ${
-            type
-              ? `<p>${levelToStars(
-                  item.description.match(/<span>(.*?)<\/span>/)[1]
-                )}</p>`
-              : `<p>${item.description}</p>`
-          }
+          ${type ? `<p>${levelToStars(item.description.match(/<span>(.*?)<\/span>/)[1])}</p>` : `<p>${item.description}</p>`}
         </div>
       `
       )
@@ -47,6 +41,7 @@ const renderAcerca = () => {
     <section class="acerca">
     <div class="acerca-container">
       <h2 class="title-section slide-top">Soy Ayoub Bouazi.</h2>
+
       <div class="who-iam">
         <div class="profil-pic fade-in">
           <img src="${perfilImg}" alt="Perfil Ayoub" class="perfil-img"/>
@@ -57,12 +52,11 @@ const renderAcerca = () => {
           <p class="description slide-top">Me apasiona la programación y me encanta aprender cosas nuevas cada día.</p>
           <p class="description slide-top">Siempre estoy buscando nuevos retos y oportunidades para crecer profesionalmente.</p>
         </div>
-        </div>
       </div>
   
       ${renderAccordion({ sections })}
 
-      <section class="additional-sections">
+      <div class="additional-sections">
         <div class="section skills">
           <h2 class="sub-title-section">Habilidades</h2>
           <div class="skills-container">
@@ -92,8 +86,8 @@ const renderAcerca = () => {
             ${renderList(interests)}
             </div>
         </div>
-      </section>
-      
+      </div>
+      </div>
     </section>
   `;
   root.innerHTML += acerca;

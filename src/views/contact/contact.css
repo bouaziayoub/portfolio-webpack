@@ -1,7 +1,8 @@
 .contact {
-  color: var(--color-green600);
+  height: 80vh;
 }
 .contact-costum {
+  color: var(--color-green600);
   margin: auto;
   max-width: 800px;
 }
@@ -112,6 +113,7 @@
 /* MEDIA QUERY */
 
 @media screen and (max-width: 840px) {
+
   .contact-container {
     flex-direction: column;
     text-align: center;
@@ -128,8 +130,9 @@
 }
 
 @media screen and (max-width: 600px) {
-  .contact {
-    margin: 6rem auto;
+  .contact-costum {
+    padding-top: 6rem;
+    margin: auto;
     width: 95%;
   }
   .contact-form {
