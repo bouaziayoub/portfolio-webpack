@@ -208,6 +208,22 @@ body {
   background-color: var(--color-green500);
 }
 
+.dark-mode .navbar-scroll{
+  background-color: var(--color-green800);
+}
+
+.dark-mode #navbar ul li a{
+  color: var(--color-green300);
+}
+
+.dark-mode #navbar ul li a:hover{
+  color: var(--color-beige);
+} 
+
+.dark-mode #navbar ul li a.active{
+  background-color: var(--color-green500);
+}
+
 
 /* .dark-mode *{
   color: var(--color-green300) !important;
