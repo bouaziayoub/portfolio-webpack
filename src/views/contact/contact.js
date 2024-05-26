@@ -5,7 +5,8 @@ const renderContact = () => {
   const root = $(".root"); // Selector de jQuery
 
   root.append(`
-    <div class="contact">
+    <section class="contact">
+      <div class="contact-costum">
       <div class="contact-header title-section slide-top">
         <h2>Contacto</h2>
       </div>
@@ -46,23 +47,22 @@ const renderContact = () => {
             <span class="validate-msg"></span>
           </form>
         </div>
+        </div>
       </div>
-    </div>
+    </section>
   `);
 
   // Función para manejar el clic en el botón
   const toggleForm = (event) => {
     const contactForm = $(event.target)
-      .closest(".contact")
+      .closest(".form-message")
       .find(".contact-form");
     contactForm.toggleClass("active-form");
   };
 
   // Adjunta el evento al contenedor del formulario después de renderizarlo
-  $(document).ready(function () {
-    $(".contact").on("click", "#show-form-btn", function (event) {
-      toggleForm(event);
-    });
+  root.on("click", "#show-form-btn", function (event) {
+    toggleForm(event);
   });
 
   // Validar el formulario

@@ -13,9 +13,22 @@
   margin: auto;
   margin-top: 15px;
   transition: 0.3s;
-  width: 45%;
+  width: 50%;
   padding: 1.5rem;
   border-radius: 40px;
+}
+
+li button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+li button img{
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
 }
 
 .navbar-scroll {
@@ -66,13 +79,10 @@
 
 @media screen and (max-width: 1359px) {
   #navbar ul {
-    width: 56%;
+    width: 61%;
   }
 }
 @media screen and (max-width: 1265px) {
-  #navbar ul {
-    /* width: 60%; */
-  }
   navbar ul li {
     margin: 0 12px;
   }
@@ -90,7 +100,7 @@
 
 @media screen and (max-width: 1024px) {
   #navbar ul {
-    width: 62%;
+    width: 67%;
   }
 
   #navbar ul li a {
@@ -100,13 +110,13 @@
 }
 @media screen and (max-width: 840px) {
   #navbar ul {
-    width: 68%;
+    width: 73%;
   }
 }
 
 @media screen and (max-width: 768px) {
   #navbar ul {
-    width: 75%;
+    width: 80%;
   }
 
   #navbar ul li {
@@ -115,7 +125,6 @@
 
   #navbar ul li a {
     padding: 8px;
-    font-size: var(--font-size-sm);
   }
 
   .slash {
@@ -127,15 +136,14 @@
 
 @media screen and (max-width: 599px) {
   #navbar ul {
-    width: 87%;
+    width: 98%;
+    font-size: 0.8rem;
   }
   #navbar ul li {
     margin: 0 15px;
   }
   #navbar ul li a {
-    padding: 7px;
-
-    font-size: var(--font-size-xs);
+    padding: 8px;
   }
 
   .slash {
@@ -144,14 +152,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  #navbar ul {
-    width: 98%;
-  }
   #navbar ul li {
     margin: 0 4px;
-  }
-  #navbar ul li a {
-    padding: 6px;
-
   }
 }

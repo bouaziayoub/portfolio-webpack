@@ -1,12 +1,37 @@
+// index.js
 import "./styles.css";
-import {
-  renderContact,
-  renderNotes,
-  renderProjects,
-  renderAcerca,
-} from "./views/exportViews";
-
+import { renderContact, renderNotes, renderProjects, renderAcerca } from "./views/exportViews";
 import { renderNavbar, renderFooter } from "./components/exportComponents";
+import { loadDarkModePreference, saveDarkModePreference, toggleDarkMode } from "./utils/darkMode";
+import $ from "jquery";
+// Cargar preferencia de modo oscuro al inicio
+document.addEventListener("DOMContentLoaded", () => {
+  loadDarkModePreference();
+
+  // Añadir evento para cambiar el modo oscuro
+  function toggleDark(event) {
+    const darkMode = document.body.classList.contains("dark-mode");
+    document.body.classList.toggle("dark-mode", !darkMode);
+    toggleDarkMode();
+    saveDarkModePreference(!darkMode);
+    loadDarkModePreference();
+  }
+
+  $(document).ready(function () {
+    $("#dark-mode-toggle").on("click", function (event) {
+      toggleDark(event);
+    });
+  });
+
+  // Añadir eventos de navegación
+  document.body.addEventListener("click", (event) => {
+    if (event.target.matches("a") && !event.target.target) {
+      event.preventDefault();
+      navigateTo(event.target.getAttribute("href"));
+    }
+  });
+  renderRoute();
+});
 
 const routes = {
   "/": renderProjects,
@@ -60,13 +85,3 @@ function updateActiveNavLink(path) {
 }
 
 window.onpopstate = renderRoute;
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.addEventListener("click", (event) => {
-    if (event.target.matches("a") && !event.target.target) {
-      event.preventDefault();
-      navigateTo(event.target.getAttribute("href"));
-    }
-  });
-  renderRoute();
-});

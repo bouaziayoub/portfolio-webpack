@@ -2,6 +2,7 @@ import "./notes.css"; // Importar estilos de notas
 import { noteCard } from "../../components/exportComponents"; // Importar componente de tarjeta de nota
 import renderNavbar from "../../components/navbar/navbar"; // Importar función de renderizado de navbar
 
+
 const notes = [
   {
     title: "Cómo optimizar el rendimiento de una aplicación React",

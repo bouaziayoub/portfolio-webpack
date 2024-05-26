@@ -30,7 +30,13 @@ const renderAcerca = () => {
         (item) => `
         <div class="list-item">
           <h3>${item.title}</h3>
-          ${type ? `<p>${levelToStars(item.description.match(/<span>(.*?)<\/span>/)[1])}</p>` : `<p>${item.description}</p>`}
+          ${
+            type
+              ? `<p>${levelToStars(
+                  item.description.match(/<span>(.*?)<\/span>/)[1]
+                )}</p>`
+              : `<p>${item.description}</p>`
+          }
         </div>
       `
       )
@@ -39,8 +45,8 @@ const renderAcerca = () => {
 
   const acerca = `
     <section class="acerca">
+    <div class="acerca-container">
       <h2 class="title-section slide-top">Soy Ayoub Bouazi.</h2>
-
       <div class="who-iam">
         <div class="profil-pic fade-in">
           <img src="${perfilImg}" alt="Perfil Ayoub" class="perfil-img"/>
@@ -50,6 +56,7 @@ const renderAcerca = () => {
           <h3 class="sub-title-section slide-top">Soy un desarrollador web con experiencia en tecnologías como HTML, CSS, JavaScript, React, Angular, Vue, Node.js, Express, MongoDB, entre otras.</h3>
           <p class="description slide-top">Me apasiona la programación y me encanta aprender cosas nuevas cada día.</p>
           <p class="description slide-top">Siempre estoy buscando nuevos retos y oportunidades para crecer profesionalmente.</p>
+        </div>
         </div>
       </div>
   
