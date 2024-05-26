@@ -29,7 +29,7 @@ const renderAcerca = () => {
       .map(
         (item) => `
         <div class="list-item">
-          <h3>${item.title}</h3>
+          <p>${item.title}</p>
           ${type ? `<p>${levelToStars(item.description.match(/<span>(.*?)<\/span>/)[1])}</p>` : `<p>${item.description}</p>`}
         </div>
       `

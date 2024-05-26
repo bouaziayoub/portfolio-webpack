@@ -1,19 +1,15 @@
 .contact {
+  max-width: 800px;
+  padding-top: 5rem;
+  margin:  auto;
+  color: var(--color-green600);
   height: 80vh;
 }
-.contact-costum {
-  color: var(--color-green600);
-  margin: auto;
-  max-width: 800px;
-}
+
 .contact-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.contact-costum{
-  margin-top: 5rem;
 }
 
 .contact h2 {
@@ -91,7 +87,7 @@
 
 .show-form-btn {
   background-color: var(--color-green600);
-  color: var(--color-white);
+  color: var(--color-green300);
   border: none;
   padding: 5px;
   margin-left: 10px;
@@ -113,7 +109,6 @@
 /* MEDIA QUERY */
 
 @media screen and (max-width: 840px) {
-
   .contact-container {
     flex-direction: column;
     text-align: center;
@@ -124,15 +119,14 @@
   .contact-item {
     margin-top: 30px;
   }
-  .show-form-btn {
+  .show-form-btn{
     margin-top: 10px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .contact-costum {
-    padding-top: 6rem;
-    margin: auto;
+  .contact {
+    padding-top: 8rem;
     width: 95%;
   }
   .contact-form {

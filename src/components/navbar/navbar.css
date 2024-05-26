@@ -3,6 +3,7 @@
   top: 0;
   z-index: 1000;
   width: 100%;
+  background-color: transparent !important;
 }
 
 #navbar ul {
@@ -24,7 +25,7 @@ li button {
   border: none;
 }
 
-li button img{
+li button img {
   margin: 0;
   padding: 0;
   width: 30px;
@@ -105,7 +106,6 @@ li button img{
 
   #navbar ul li a {
     padding: 9px;
-
   }
 }
 @media screen and (max-width: 840px) {

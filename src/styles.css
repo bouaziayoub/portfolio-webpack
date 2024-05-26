@@ -169,17 +169,45 @@ body {
 }
 
 .dark-mode #navbar, 
-.dark-mode .footer ,
+.dark-mode .footer,
 .dark-mode .acerca,
 .dark-mode .notes,
 .dark-mode .proyects,
-.dark-mode .contact,
+.dark-mode .custom-contact,
 .dark-mode .contact-form,
 .dark-mode .contact-item,
 .dark-mode .contact-container,
 .dark-mode .form-message-header{
   background: var(--color-green800);
+  color: var(--color-green300);
 }
+
+.dark-mode .sub-title-section,
+.dark-mode .title-section,
+.dark-mode .skills-container .sub-sub-title-section{
+  color: var(--color-green400);
+}
+
+.dark-mode .skills-list,
+.dark-mode .languages-list,
+.dark-mode .interests-list,
+.dark-mode .footer *{
+  color: var(--color-green300);
+}
+
+.dark-mode .pagination-btn{
+  background-color: var(--color-green500);
+  color: var(--color-white);
+}
+
+.dark-mode .pagination-btn:hover{
+  background-color: var(--color-green600);
+}
+
+.dark-mode .pagination-btn.active{
+  background-color: var(--color-green500);
+}
+
 
 /* .dark-mode *{
   color: var(--color-green300) !important;

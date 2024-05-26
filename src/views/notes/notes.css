@@ -38,6 +38,7 @@
   margin: 0 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  border-radius: 5px;
 }
 
 .pagination-btn:hover {
@@ -45,7 +46,7 @@
 }
 
 .pagination-btn:disabled {
-  background-color: var(--color-gray400);
+  background-color: transparent;
   cursor: not-allowed;
 }
 
