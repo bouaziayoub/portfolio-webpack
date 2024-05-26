@@ -5,19 +5,19 @@ import { downloadSectionAsPDF } from "../../utils/downloadPdf"; // Importa la fu
 const renderFooter = () => {
   const root = document.querySelector(".root");
   const footerHtml = `
-    <footer class="footer">
-      <div class="footer-copy">
+    <footer class="footer d-flex justify-content-around py-5 fw-bold">
+      <div class="footer-copy text-success d-flex justify-content-center align-items-center p-2">
         <p>&copy; ${new Date().getFullYear()} Ayoub Bouazi · Todos los derechos reservados.</p>
       </div>
-      <div class="footer-contact">
-        <ul class="social-links">
-          <li><a href="https://www.linkedin.com/in/ayoub-bouazi" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://github.com/ayoubbouazi" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a id="cv-link" href="#">CV</a></li> <!-- Cambia el href a "#" -->
+      <div class="footer-contact text-success d-flex justify-content-center align-items-start p-2">
+        <ul class="list-unstyled">
+          <li class="py-2"><a href="https://www.linkedin.com/in/ayoub-bouazi" target="_blank" rel="noopener noreferrer" class="text-success text-decoration-none">LinkedIn</a></li>
+          <li class="py-2"><a href="https://github.com/ayoubbouazi" target="_blank" rel="noopener noreferrer" class="text-success text-decoration-none">GitHub</a></li>
+          <li class="py-2"><a id="cv-link" href="#" class="text-success text-decoration-none">CV</a></li>
         </ul>
-        <ul class="social-links">
-          <li><a href="#" id="contact-link">Contact</a></li> <!-- Cambia el href a "#" y agrega un id -->
-          <li><a href="#" id="email-link">Email</a></li> <!-- Cambia el href a "#" y agrega un id -->
+        <ul class="list-unstyled">
+          <li class="py-2"><a href="#" id="contact-link" class="text-success text-decoration-none">Contact</a></li>
+          <li class="py-2"><a href="#" id="email-link" class="text-success text-decoration-none">Email</a></li>
         </ul>
       </div>
     </footer>
