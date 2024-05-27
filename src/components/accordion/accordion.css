@@ -1,6 +1,8 @@
 .accordion-item {
   width: 80%;
   margin: auto;
+  background-color: transparent;
+  border: none;
   /* margin-bottom: 10px; */
 }
 .accordion-item .sub-title-section {

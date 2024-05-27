@@ -6,6 +6,7 @@
   margin: 16px;
   transition: transform 0.3s;
   opacity: 0.9;
+  height: 450px;
 }
 
 .card-small {
@@ -24,17 +25,27 @@
   transition: transform 0.3s;
 }
 
-.card-img-container {
-  position: relative;
-  float: right;
+.card-img-container img{
+  /* position: relative; */
   width: 90%;
-  height: 400px;
+  height: 350px;
+  border-radius: 10px 0 0 0;
+  
+}
+
+.card-img-container img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  width: 90%;
+  height: 320px;
   border-radius: 10px 0 0 0;
 }
 
 .card-img {
   width: 100%;
-  height: 400px;
+  height: 350px;
   object-fit: cover;
   border-radius: 10px 0 0 0;
 }

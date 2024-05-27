@@ -1,3 +1,7 @@
+.list-unstyled a:hover {
+  color: var(--color-green500) !important;
+}
+
 @media (max-width: 768px) {
   .footer {
     flex-direction: column !important;

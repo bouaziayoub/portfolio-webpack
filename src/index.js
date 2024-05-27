@@ -1,5 +1,6 @@
 // index.js
 import "./styles.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { renderContact, renderNotes, renderProjects, renderAcerca } from "./views/exportViews";
 import { renderNavbar, renderFooter } from "./components/exportComponents";
 import { loadDarkModePreference, saveDarkModePreference, toggleDarkMode } from "./utils/darkMode";

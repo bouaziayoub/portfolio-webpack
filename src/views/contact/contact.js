@@ -7,8 +7,8 @@ const renderContact = () => {
   root.append(`
   <section class="custom-contact">
     <div class="contact">
-      <div class="contact-header title-section slide-top">
-        <h2>Contacto</h2>
+      <div class="contact-header slide-top">
+        <h2 class="title-section">Contacto</h2>
       </div>
 
       <div class="contact-container slide-top">

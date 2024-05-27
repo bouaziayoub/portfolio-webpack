@@ -62,8 +62,11 @@ const renderNavbar = () => {
       document.documentElement.scrollTop > 50
     ) {
       navbarList.classList.add("navbar-scroll");
+      navbarList.style.backgroundColor = "#fff";
+      // agregar estilo al navbar
     } else {
       navbarList.classList.remove("navbar-scroll");
+      navbarList.style.backgroundColor = "transparent";
     }
   }
 };

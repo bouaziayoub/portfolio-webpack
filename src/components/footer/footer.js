@@ -9,14 +9,14 @@ const renderFooter = () => {
       <div class="footer-copy text-success d-flex justify-content-center align-items-center p-2">
         <p>&copy; ${new Date().getFullYear()} Ayoub Bouazi · Todos los derechos reservados.</p>
       </div>
-      <div class="footer-contact text-success d-flex justify-content-center align-items-start p-2">
-        <ul class="list-unstyled">
+      <div class="footer-contact text-success d-flex justify-content-around align-items-start p-4">
+        <ul class="list-unstyled me-3">
           <li class="py-2"><a href="https://www.linkedin.com/in/ayoub-bouazi" target="_blank" rel="noopener noreferrer" class="text-success text-decoration-none">LinkedIn</a></li>
           <li class="py-2"><a href="https://github.com/ayoubbouazi" target="_blank" rel="noopener noreferrer" class="text-success text-decoration-none">GitHub</a></li>
           <li class="py-2"><a id="cv-link" href="#" class="text-success text-decoration-none">CV</a></li>
         </ul>
         <ul class="list-unstyled">
-          <li class="py-2"><a href="#" id="contact-link" class="text-success text-decoration-none">Contact</a></li>
+          <li class="py-2"><a href="/contact" id="contact-link" class="text-success text-decoration-none">Contact</a></li>
           <li class="py-2"><a href="#" id="email-link" class="text-success text-decoration-none">Email</a></li>
         </ul>
       </div>

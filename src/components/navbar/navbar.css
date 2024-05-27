@@ -17,6 +17,9 @@
   width: 50%;
   padding: 1.5rem;
   border-radius: 40px;
+  background-color: var(--color-white);
+  opacity: 0.9;
+
 }
 
 li button {
