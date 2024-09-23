@@ -1,4 +1,4 @@
-import "./Projects.css";
+import "./projects.css";
 import card from "../../components/card/card.js";
 import sectionsJson from "../../assets/json/projects.json"; // Importa el archivo JSON con los proyectos
 
